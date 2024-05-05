@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="bookmark.css">
+    <title>북마크</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="category">
+            <button class="on">맛집</button>
+            <button>카페</button>
+            <button>놀거리</button>
+            <button>숙소</button>
+        </div><!-- .category end -->
+        <ul class="item_list">
+            <li class="item">
+                <a href="#">
+                    <figure>
+                        <img src="../img/해목.jpg" alt="해목해운대점">
+                    </figure>
+                    <div class="text">
+                        <strong>해목 해운대점</strong>
+                        <p>부산 해운대구 구남로24번길 8</p>
+                    </div><!-- .text end -->
+                    <button class="delete">
+                        <img src="../img/휴지통.png" alt="삭제">
+                    </button>
+                </a>
+            </li><!-- .item end -->
+            <li class="item">
+                <a href="#">
+                    <figure>
+                        <img src="../img/어반스시.jpg" alt="어반스시">
+                    </figure>
+                    <div class="text">
+                        <strong>어반스시</strong>
+                        <p>부산 해운대구 해운대해변로 141</p>
+                    </div><!-- .text end -->
+                    <button class="delete">
+                        <img src="../img/휴지통.png" alt="삭제">
+                    </button>
+                </a>
+            </li><!-- .item end -->
+            <li class="item">
+                <a href="#">
+                    <figure>
+                        <img src="../img/뉴러우멘관즈.jpg" alt="뉴러우멘관즈">
+                    </figure>
+                    <div class="text">
+                        <strong>뉴러우멘관즈</strong>
+                        <p>부산 수영구 수영로388버길 25-4</p>
+                    </div><!-- .text end -->
+                    <button class="delete">
+                        <img src="../img/휴지통.png" alt="삭제">
+                    </button>
+                </a>
+            </li><!-- .item end -->
+            <li class="item">
+                <a href="#">
+                    <figure>
+                        <img src="../img/융캉찌에.jpg" alt="융캉찌에">
+                    </figure>
+                    <div class="text">
+                        <strong>융캉찌에</strong>
+                        <p>부산 수영구 광안해변로277번길 10</p>
+                    </div><!-- .text end -->
+                    <button class="delete">
+                        <img src="../img/휴지통.png" alt="삭제">
+                    </button>
+                </a>
+            </li><!-- .item end -->
+        </ul><!-- .item_list end -->
+        <button class="view_map">
+            <img src="../img/지도.png" alt="지도로 보기">
+            <span>지도로 보기</span>
+        </button><!-- .view_map end -->
+        <div class="bottom_bar">
+            <ul>
+                <li><a href="../index.html">
+                        <img src="../img/메인.png" alt="메인페이지">
+                        <span>메인</span>
+                    </a></li>
+                <li><a href="../map/index.html">
+                        <img src="../img/위치.png" alt="내주변">
+                        <span>내주변</span>
+                    </a></li>
+                <li><a href="../search/index.html">
+                        <img src="../img/검색.png" alt="검색">
+                        <span>검색</span>
+                    </a></li>
+                <li class="on"><a href="index.html">
+                        <img src="../img/bookmark2.png" alt="북마크">
+                        <span>북마크</span>
+                    </a></li>
+                <li><a href="../login/index.html">
+                        <img src="../img/마이.png" alt="마이페이지">
+                        <span>마이</span>
+                    </a></li>
+            </ul>
+        </div><!-- .bottom_bar end -->
+</body>
+<script>
+    //휴지통 버튼 눌러서 북마크 삭제
+    let del = document.querySelectorAll('.delete');
+
+    del.forEach(function (item) {
+        item.addEventListener('click', function (event) {
+            let list = this.closest('.item'); //해당 li 요소 찾기 [closest : 상위 요소를 찾는 메서드]
+            list.style.display = 'none';
+        });
+    });
+</script>
+
+</html>

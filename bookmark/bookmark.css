@@ -1,0 +1,149 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+body {
+  font-family: "Pretendard Variable";
+  line-height: 1;
+  color: #333;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+ display: none;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 767px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.category {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+}
+.category button {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+.category button.on {
+  color: #457EF8;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #457EF8;
+}
+.item_list {
+  margin-top: 80px;
+  padding: 0 20px;
+}
+.item_list .item {
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+.item_list .item a {
+  display: flex;
+  column-gap: 16px;
+  padding: 10px 0;
+}
+.item_list .item figure {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.item_list .item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item_list .item .text {
+  padding-top: 15px;
+}
+.item_list .item .text p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  margin-top: 8px;
+}
+.item_list .item .delete {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  cursor: pointer;
+}
+.item_list .item .delete img {
+  width: 16px;
+  opacity: .7;
+}
+.view_map {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #457EF8;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.view_map span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.bottom_bar {
+  max-width: 767px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px 30px 20px;
+  background-color: #fff;
+  box-shadow: 0px -2px 8px rgba(0,0,0,.1);
+  z-index: 1;
+}
+.bottom_bar ul {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom_bar ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom_bar ul li a img {
+  width: 20px;
+}
+.bottom_bar ul li a span {
+  color: #808080;
+  font-size: 12px;
+  margin-top: 7px;
+}
+.bottom_bar ul li.on a span {
+  color: #2B58AF;
+}

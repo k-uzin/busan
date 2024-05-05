@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b33263a09aef6edb6c2c72f41616198">
+    </script>
+    <title>부산한바꾸 내주변</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="map">
+            <div id="map" style="width:100vw;height:100vh;"></div>
+            <div class="search">
+                <input type="text" placeholder="대연동">
+                <img class="icon_search" src="../img/돋보기.png" alt="검색">
+            </div><!-- .search end -->
+            <ul class="category">
+                <li>
+                    <img src="../img/지도_맛집.png" alt="맛집">
+                    <span>맛집</span>
+                </li>
+                <li class="on">
+                    <img src="../img/지도_카페.png" alt="카페">
+                    <span>카페</span>
+                </li>
+                <li>
+                    <img src="../img/지도_놀거리.png" alt="놀거리">
+                    <span>놀거리</span>
+                </li>
+                <li>
+                    <img src="../img/지도_숙소.png" alt="숙소">
+                    <span>숙소</span>
+                </li>
+            </ul><!-- .category end -->
+            <ul class="item_list">
+                <li class="item"><a href="#">
+                        <figure>
+                            <img src="../img/읍천리382.jpg" alt="읍천리382 부산 경성대점">
+                        </figure>
+                        <div class="text">
+                            <strong>읍천리382 부산 경성대점</strong>
+                            <p>경성대 커피 디저트 잘하는 집</p>
+                            <div>
+                                <span>영업중</span>
+                                <span>331m</span>
+                            </div>
+                        </div><!-- .text end -->
+                    </a></li><!-- .item end -->
+                <li class="item"><a href="#">
+                        <figure>
+                            <img src="../img/감성가든.jpg" alt="감성가든">
+                        </figure>
+                        <div class="text">
+                            <strong>감성가든</strong>
+                            <p>꽃이 가득한 생과일 수플레 맛집</p>
+                            <div>
+                                <span>영업중</span>
+                                <span>480m</span>
+                            </div>
+                        </div><!-- .text end -->
+                    </a></li><!-- .item end -->
+                <li class="item"><a href="#">
+                        <figure>
+                            <img src="../img/빌라드엘르.jpg" alt="빌라드엘르">
+                        </figure>
+                        <div class="text">
+                            <strong>빌라 드 엘르</strong>
+                            <p>나만 알고 싶은 아지트</p>
+                            <div>
+                                <span>영업중</span>
+                                <span>738m</span>
+                            </div>
+                        </div><!-- .text end -->
+                    </a></li><!-- .item end -->
+                <li class="item"><a href="#">
+                        <figure>
+                            <img src="../img/플로르채.jpg" alt="플로르채">
+                        </figure>
+                        <div class="text">
+                            <strong>플로르채</strong>
+                            <p>앙금플라워 떡케이크 전문점</p>
+                            <div>
+                                <span>영업중</span>
+                                <span>706m</span>
+                            </div>
+                        </div><!-- .text end -->
+                    </a></li><!-- .item end -->
+                <li class="item"><a href="#">
+                        <figure>
+                            <img src="../img/옴싸우스코리아.jpg" alt="옴싸우스코리아">
+                        </figure>
+                        <div class="text">
+                            <strong>옴싸우스코리아</strong>
+                            <p>도심속 내면의 평화를 찾는 곳</p>
+                            <div>
+                                <span>영업중</span>
+                                <span>960m</span>
+                            </div>
+                        </div><!-- .text end -->
+                    </a></li><!-- .item end -->
+            </ul><!-- .item_list end -->
+        </div><!-- .map end -->
+        <div class="bottom_bar">
+            <ul>
+                <li><a href="../index.html">
+                        <img src="../img/메인.png" alt="메인페이지">
+                        <span>메인</span>
+                    </a></li>
+                <li class="on"><a href="index.html">
+                        <img src="../img/위치_on.png" alt="내주변">
+                        <span>내주변</span>
+                    </a></li>
+                <li><a href="../search/index.html">
+                        <img src="../img/검색.png" alt="검색">
+                        <span>검색</span>
+                    </a></li>
+                <li><a href="../bookmark/index.html">
+                        <img src="../img/bookmark.png" alt="북마크">
+                        <span>북마크</span>
+                    </a></li>
+                <li><a href="../login/index.html">
+                        <img src="../img/마이.png" alt="마이페이지">
+                        <span>마이</span>
+                    </a></li>
+            </ul>
+        </div><!-- .bottom_bar end -->
+    </div><!-- .wrap end -->
+
+</body>
+<script>
+    //카카오맵
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(35.1356541, 129.0987445),
+        level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    var positions = [{
+            title: '읍천리 382 부산 경성대점',
+            latlng: new kakao.maps.LatLng(35.1356541, 129.0987445)
+        },
+        {
+            title: '감성가든',
+            latlng: new kakao.maps.LatLng(35.1350436, 129.1004881)
+        },
+        {
+            title: '빌라 드 엘르',
+            latlng: new kakao.maps.LatLng(35.1381762, 129.102241)
+        },
+        {
+            title: '플로르채',
+            latlng: new kakao.maps.LatLng(35.1372809, 129.0899096)
+        },
+        {
+            title: '옴싸우스코리아',
+            latlng: new kakao.maps.LatLng(35.1295934, 129.0907639)
+        }
+    ];
+
+    for (var i = 0; i < positions.length; i++) {
+
+        var marker = new kakao.maps.Marker({ // 마커 생성
+            map: map, // 마커를 표시할 지도
+            position: positions[i].latlng, // 마커를 표시할 위치
+            title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시 됨
+        });
+    }
+</script>
+
+</html>

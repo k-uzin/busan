@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="login.css">
+    <title>로그인</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <button class="back_btn">
+                <img src="../img/화살표.png" alt="뒤로가기">
+            </button>
+            <strong>로그인</strong>
+        </div><!-- .top end -->
+        <div class="box">
+            <img src="../img/로그인이미지.png" alt="이미지">
+            <div class="login">
+                <div class="kakao_login">
+                    <a href="#">
+                        <img src="../img/icon_kakao.svg" alt="카카오로그인">
+                        <span>카카오로 3초 만에 시작하기</span>
+                    </a>
+                </div><!-- .kakao_login end -->
+                <div class="other_login">
+                    <div class="naver_login">
+                        <a href="#">
+                            <img src="../img/네이버로그인.png" alt="네이버로그인">
+                        </a>
+                    </div><!-- .naver_login end -->
+                    <div class="apple_login">
+                        <a href="#">
+                            <img src="../img/애플로그인.png" alt="애플로그인">
+                        </a>
+                    </div><!-- .naver_login end -->
+                    <div class="google_login">
+                        <a href="#">
+                            <img src="../img/구글로그인.png" alt="구글로그인">
+                        </a>
+                    </div><!-- .naver_login end -->
+                </div><!-- .other_login end -->
+                <div class="email_login">
+                    <a href="#">이메일로 로그인하기</a>
+                </div><!-- .email_login end -->
+            </div><!-- .login end -->
+        </div><!-- .box end -->
+    </div><!-- .wrap end -->    
+</body>
+<script>
+    // 뒤로가기 버튼 클릭 시 이전 페이지로 이동
+    document.querySelector('.back_btn').addEventListener('click', function () {
+        history.back(); // 이전 페이지로 돌아감
+    });
+</script>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="search.css">
+    </script>
+    <title>검색</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <a href="#" class="back_btn">
+                <img src="../img/화살표.png" alt="뒤로가기">
+            </a>
+            <div class="search">
+                <img src="../img/돋보기.png" alt="검색">
+                <input type="text" placeholder="어디로 놀러 갈까요?">
+            </div><!-- .search end -->
+        </div><!-- .top end -->
+        <div class="recent_searches">
+            <strong>최근 검색어</strong>
+            <button>편집</button>
+            <ul>
+                <li><a href="#">풀빌라펜션</a></li>
+                <li><a href="#">흰여울문화마을</a></li>
+                <li><a href="#">국밥</a></li>
+            </ul>
+        </div><!-- .recent_searches -->
+        <div class="popular_searches">
+            <strong>인기 검색어</strong>
+            <span class="date">04.30 16:00 기준</span>
+            <ul>
+                <li class="on">
+                    <span>1</span>
+                    <a href="#">더무빙카라반</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+                <li class="on">
+                    <span>2</span>
+                    <a href="#">웨이브온커피</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+                <li class="on">
+                    <span>3</span>
+                    <a href="#">해운대블루라인파크</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+                <li>
+                    <span>4</span>
+                    <a href="#">광안리맛집</a>
+                    <img src="../img/하강.png" alt="하강">
+                </li>
+                <li>
+                    <span>5</span>
+                    <a href="#">오션뷰</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+                <li>
+                    <span>6</span>
+                    <a href="#">피크닉</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+                <li>
+                    <span>7</span>
+                    <a href="#">요트투어</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+                <li>
+                    <span>8</span>
+                    <a href="#">글램핑</a>
+                    <img src="../img/하강.png" alt="하강">
+                </li>
+                <li>
+                    <span>9</span>
+                    <a href="#">벚꽃명소</a>
+                    <img src="../img/하강.png" alt="하강">
+                </li>
+                <li>
+                    <span>10</span>
+                    <a href="#">조개구이</a>
+                    <img src="../img/상승.png" alt="상승">
+                </li>
+            </ul>
+        </div><!-- .popular_searches -->
+        <div class="bottom_bar">
+            <ul>
+                <li><a href="../index.html">
+                        <img src="../img/메인.png" alt="메인페이지">
+                        <span>메인</span>
+                    </a></li>
+                <li><a href="../map/index.html">
+                        <img src="../img/위치.png" alt="내주변">
+                        <span>내주변</span>
+                    </a></li>
+                <li class="on"><a href="index.html">
+                        <img src="../img/검색_on.png" alt="검색">
+                        <span>검색</span>
+                    </a></li>
+                <li><a href="../bookmark/index.html">
+                        <img src="../img/bookmark.png" alt="북마크">
+                        <span>북마크</span>
+                    </a></li>
+                <li><a href="../login/index.html">
+                        <img src="../img/마이.png" alt="마이페이지">
+                        <span>마이</span>
+                    </a></li>
+            </ul>
+        </div><!-- .bottom_bar end -->
+</body>
+<script>
+    //뒤로가기 버튼 클릭 시, 이전 페이지로 이동
+    document.querySelector('.back_btn').addEventListener('click', function () {
+        history.back(); //이전 페이지로 돌아감
+    });
+
+    //현재 날짜와 시간
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, '0'); //월 (0-11), 두 자리 수로 맞춤
+    const day = String(now.getDate()).padStart(2, '0'); //일, 두 자리 수로 맞춤
+    const hours = String(now.getHours()).padStart(2, '0'); //시, 두 자리 수로 맞춤
+
+    const date = document.querySelector('.date'); //span 요소 선택
+    date.textContent = `${month}.${day} ${hours}:00 기준`; //날짜와 시간 설정
+</script>
+
+</html>
